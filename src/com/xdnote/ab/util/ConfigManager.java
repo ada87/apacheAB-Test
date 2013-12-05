@@ -29,7 +29,7 @@ public class ConfigManager {
      * @return Properties
      * <p>使用单例模式获取一个配置properties</p>
      * */
-	public static Properties getprop(){
+	public static synchronized Properties getprop() {
 		if (prop == null) {
 			prop = new Properties();
 			try {
